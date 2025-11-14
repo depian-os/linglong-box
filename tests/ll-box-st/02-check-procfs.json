@@ -1,0 +1,17 @@
+{
+	"name": "Check procfs",
+	"process": {
+		"user": {
+			"uid": 0,
+			"gid": 0
+		},
+		"args": ["ps", "a", "-o", "cmd", "--no-headers"],
+		"env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"TERM=xterm",
+			"HOME=/root"
+		],
+		"cwd": "/"
+	},
+	"expected": "ps a -o cmd --no-headers"
+}

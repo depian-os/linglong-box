@@ -1,0 +1,17 @@
+{
+	"name": "Execute `whoami`",
+	"process": {
+		"user": {
+			"uid": 0,
+			"gid": 0
+		},
+		"args": ["/bin/whoami"],
+		"env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"TERM=xterm",
+			"HOME=/root"
+		],
+		"cwd": "/"
+	},
+	"expected": "root"
+}

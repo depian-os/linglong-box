@@ -1,0 +1,23 @@
+{
+	"name": "Check NoNewPrivs",
+	"process": {
+		"user": {
+			"uid": 0,
+			"gid": 0
+		},
+		"args": [
+			"/bin/env",
+			"bash",
+			"-c",
+			"awk '/^NoNewPrivs/ {print $2}' /proc/self/status"
+		],
+		"env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"TERM=xterm",
+			"HOME=/root"
+		],
+		"cwd": "/",
+		"noNewPrivileges": true
+	},
+	"expected": "1"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Check cwd",
+	"process": {
+		"user": {
+			"uid": 0,
+			"gid": 0
+		},
+		"args": ["/bin/env", "bash", "-c", "pwd"],
+		"env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"TERM=xterm",
+			"HOME=/root"
+		],
+		"cwd": "/run"
+	},
+	"expected": "/run"
+}
